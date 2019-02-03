@@ -1,0 +1,100 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* containers */
+
+.alert-container {
+    
+}
+
+.callout-container {
+   height: 100vh; /* height is 100% of the viewport */
+   /* below code copied and pasted from full-width background images website *edit bg url*;
+   also need to include ../ prefix in front of image url name to ensure it directs back to root directory,  as we are currently in css directory*/
+   background: url(../image/whiskey-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* this is to position the container in the center of the viewport ***RESEARCH FLEXBOX*** */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.opaque-overlay /* these are the styling properties for the overlay - MAKE SURE POSITION IS ABSOLUTE SO IT SITS ABOVE THE IMAGE */ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* This makes the background color of the callout area transparent */
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron h1 /* if creating a class for h1, it won't work, as this is to do with specificity
+                linking to the actual element within .jumbotron will override it */ {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.jumbotron .lead {
+    color: #a7a7a7;
+    margin: 25px 0;
+}
+
+.jumbotron small {
+    font-size: 60%;
+    font-style: italic;
+    color: #d0d0d0;
+}
+
+.quotes-container {
+    
+}
+
+.features-container {
+    
+}
+
+/* Block dividers */
+
+.block-divider {
+    width: 450px;
+    height: 5px;
+    border: 0;
+}
+
+.block-divider--white {
+    background-color: #d0d0d057;
+}
+
+/* Buttons */
+
+.btn--cta /* call to action */ {
+    font-weight: bold;
+    border-radius: 23px;
+    width: 160px;
+}
+
+.btn--green {
+    background-color: #bada55;
+    border-color: #bada55;
+    color: #000;
+}
+
+.btn--green:hover,
+.btn--green:active,
+.btn--green:focus,
+.btn--green:active:focus {
+    /* makes the btn go slightly darker when hovering, clicking, etc. */
+    background-color: #8ea73f;
+    border-color: #8ea73f;
+    color: #000;
+}

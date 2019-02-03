@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Whiskey Drop | Taste a new whiskey every month</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -42,38 +44,49 @@
         </div>
     </nav>
 
-    <article class="container">
-
+    <article class="container alert-container">
+        <!--Alert-->
+        <div class="row hidden-xs">
+            <div class="col-xs-12">
+                <div class="alert alert-warning">
+                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
+                    <!--alert with text - first part in bold and the last part will be a link-->
+                </div>
+            </div>
+        </div>
+        <!--/Alert-->
+    </article>
+    
+    <article class="container-fluid callout-container">
+        <div class="opaque-overlay">&nbsp;</div> <!--this is to take the edge off the image and make the text stand out a bit more-->
+        <!--&nbsp (non-breaking space) creates a space in a line that can't be broken by word wrap
+        this ensures that the overlay won't move out of position-->
         <!--.callout-->
         <div class="row">
             <div class="col-xs-12">
                 <section class="callout jumbotron text-center">
                     <!--jumbotron feature really makes the callout stand out displays it on grey background-->
                     <h1>The finest whiskeys delivered to your doorstep</h1>
+                    <hr class="block-divider block-divider--white">
+                    <!--block-divider--white, etc. are modifier classes, these allow us to apply general styles to <hr> but modify individual ones too-->
                     <p class="lead">Sign up today to start receiving the world's best whiskeys every month. <s class="hidden-xs">£19.99</s> <span class="visible-xs"><br></span><strong><mark>First one is free!</mark></strong></p>
                     <!--.lead class helps it to stand out and render nicely;
                     s tag is for strikethrough; strong tag is for bold; mark tag is to highlight-->
-                    <p><button class="btn btn-lg btn-success">Sign Up!</button></p>
+                    <p><button class="btn btn-lg btn--cta btn--green" data-toggle="modal" data-target="#signUpModal">Sign Up!</button></p>
                     <!--to make use of bootstrap's button styles, add a "btn" class to either a button or form input element, or an anchor tag
                     btn-lg & btn-success make it standout and adds additional style-->
+                    <!--data-toggle="modal" tells Boostrap that this button is the trigger for a modal somewhere on the page
+                    data-target="#signUpModal" link to the relevant modal's id and tells Bootstrap exactly which modal to show when clicked-->
                     <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
                     <!--.text-muted class makes the text a bit lighter;
                     small tag is useful for small print, such as legal terms-->
                 </section>
             </div>
         </div>
-        <!--Alert-->
-        <div class="row hidden-xs">
-            <div class="col-xs-12">
-                <div class="alert alert-warning">
-                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
-                <!--alert with text - first part in bold and the last part will be a link-->
-                </div>
-            </div>
-        </div>
-        <!--/Alert-->
         <!--/.Callout-->
+    </article>
 
+    <article class="container quotes-container">
         <!--.quotes-->
         <section class="quotes">
             <div class="row">
@@ -116,7 +129,9 @@
             </div>
         </section>
         <!--/.quotes-->
+    </article>
 
+    <article class="container features-container">
         <!--.features-->
         <section class="features">
             <div class="row">
@@ -155,8 +170,46 @@
             </div>
         </section>
         <!--/.features-->
-
     </article>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!--specify id to be able to link it to the relevant HTML element (in this case, the Sign Up button in the callout (see callout for further info-->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sign Up For Whiskey Drop</h4>
+                </div>
+                <div class="modal-body">
+                    <!--add content to the body (in this instance, we've added a form)-->
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <!--the below p.help-block adds help text below the relevant field (in this instance, the email field)-->
+                            <p class="help-block">We'll never share your email address with anyone</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <!--This makes the user re-enter the password before signing up - do this by changing the label's for att to "passwordRepeat"
+                        label's for att must match the input's id att-->
+                        <div class="form-group">
+                            <label for="passwordRepeat">Repeat Password</label>
+                            <input type="password" class="form-control" id="passwordRepeat" placeholder="Repeat Your Password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign Up!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--JavaScript & jQuery links go at the very bottom of the page, just above the closing body tag-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
