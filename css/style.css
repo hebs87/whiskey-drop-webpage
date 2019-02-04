@@ -176,3 +176,20 @@ body {
     border-color: #8ea73f;
     color: #000;
 }
+
+/* Alert */
+
+.alert-container .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.site-wide-alert {
+    padding: 5px 15px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    color: #927616;
+    background-color: #e2b723;
+    border-color: #e2b723;
+}
