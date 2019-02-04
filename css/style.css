@@ -2,6 +2,75 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Navbar */
+
+.navbar {
+    /* gets rid of the margin at the bottom and positions the navbar over the callout so you still get the effect of the full screen picture */
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    border: 0;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border: 0;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-default .navbar-nav a {
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+
+.navbar-btn {
+    border: 0;
+    border-radius: 16px;
+    width: 100px;
+    background-color: #bada55;
+    color: black;
+}
+
+.navbar-btn:hover {
+    background-color: #8ea73f;
+    border-color: #8ea73f;
+    color: #000;
+}
+
 /* containers */
 
 .alert-container {
@@ -9,21 +78,25 @@ body {
 }
 
 .callout-container {
-   height: 100vh; /* height is 100% of the viewport */
-   /* below code copied and pasted from full-width background images website *edit bg url*;
+    height: 100vh;
+    /* height is 100% of the viewport */
+    /* below code copied and pasted from full-width background images website *edit bg url*;
    also need to include ../ prefix in front of image url name to ensure it directs back to root directory,  as we are currently in css directory*/
-   background: url(../image/whiskey-bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* this is to position the container in the center of the viewport ***RESEARCH FLEXBOX*** */
-  display: flex;
-  align-items: center;
-  position: relative;
+    background: url(../image/whiskey-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* this is to position the container in the center of the viewport ***RESEARCH FLEXBOX*** */
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.opaque-overlay /* these are the styling properties for the overlay - MAKE SURE POSITION IS ABSOLUTE SO IT SITS ABOVE THE IMAGE */ {
+.opaque-overlay
+/* these are the styling properties for the overlay - MAKE SURE POSITION IS ABSOLUTE SO IT SITS ABOVE THE IMAGE */
+
+    {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,13 +105,19 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+
 /* This makes the background color of the callout area transparent */
+
 .jumbotron {
     background-color: transparent;
 }
 
-.jumbotron h1 /* if creating a class for h1, it won't work, as this is to do with specificity
-                linking to the actual element within .jumbotron will override it */ {
+.jumbotron h1
+/* if creating a class for h1, it won't work, as this is to do with specificity
+                linking to the actual element within .jumbotron will override it */
+
+    {
     color: white;
     font-weight: bold;
     margin-bottom: 30px;
@@ -55,18 +134,14 @@ body {
     color: #d0d0d0;
 }
 
-.quotes-container {
-    
-}
+.quotes-container {}
 
-.features-container {
-    
-}
+.features-container {}
 
 /* Block dividers */
 
 .block-divider {
-    width: 450px;
+    width: 50px;
     height: 5px;
     border: 0;
 }
@@ -77,7 +152,10 @@ body {
 
 /* Buttons */
 
-.btn--cta /* call to action */ {
+.btn--cta
+/* call to action */
+
+    {
     font-weight: bold;
     border-radius: 23px;
     width: 160px;

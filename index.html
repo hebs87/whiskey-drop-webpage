@@ -16,6 +16,21 @@
     <!--Nav-->
     <nav class="navbar navbar-default">
         <!--.navbar-fixed-top fixes navbar to the top of the page so it's visible when scrolling-->
+
+        <!--Alert-->
+        <article class="container-fluid alert-container hidden-xs">
+            <!--Alert-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="site-wide-alert alert alert-warning">
+                        <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
+                        <!--alert with text - first part in bold and the last part will be a link-->
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--/Alert-->
+
         <div class="container-fluid">
 
             <!--logo-->
@@ -23,42 +38,40 @@
                 <a href="/" class="navbar-brand">
                     Whiskey Drop
                 </a>
+                <!--The below code gives us a hamburger button when on smaller devices-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
 
-            <!--Navbar-->
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="">About</a></li>
-                <li class="visible-xs"><a href="">Sign In</a></li>
-                <!--.visible-xs makes the link visible only on xs resolutions, so effectively replaces the below button-->
-            </ul>
+            <div class="collapse navbar-collapse" id="navbar">
+                <!--id should match the data-target="#name" on the hamburger button above-->
+                <!--Navbar-->
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li class="visible-xs"><a href="">Sign In</a></li>
+                    <!--.visible-xs makes the link visible only on xs resolutions, so effectively replaces the below button-->
+                </ul>
 
-            <!--Message-->
-            <div class="navbar-header navbar-right hidden-xs">
-                <!--.hidden-xs hides this feature on xs resolutions-->
-                <a href=/login class="btn btn-default navbar-btn">Sign In</a>
-                <p class="navbar-text"><i>Great whiskey delievered to your door</i>
-                </p>
+                <!--Message-->
+                <div class="navbar-header navbar-right hidden-xs">
+                    <!--.hidden-xs hides this feature on xs resolutions-->
+                    <a href=/login class="btn btn-default navbar-btn">Sign In</a>
+                    <p class="navbar-text"><i>Great whiskey delievered to your door</i>
+                    </p>
+                </div>
             </div>
 
         </div>
     </nav>
 
-    <article class="container alert-container">
-        <!--Alert-->
-        <div class="row hidden-xs">
-            <div class="col-xs-12">
-                <div class="alert alert-warning">
-                    <strong>Sale Now On!</strong> We've got a sale on. Get a 12 month subscription for the price of 6! <a href="">See here for more details</a>
-                    <!--alert with text - first part in bold and the last part will be a link-->
-                </div>
-            </div>
-        </div>
-        <!--/Alert-->
-    </article>
-    
     <article class="container-fluid callout-container">
-        <div class="opaque-overlay">&nbsp;</div> <!--this is to take the edge off the image and make the text stand out a bit more-->
+        <div class="opaque-overlay">&nbsp;</div>
+        <!--this is to take the edge off the image and make the text stand out a bit more-->
         <!--&nbsp (non-breaking space) creates a space in a line that can't be broken by word wrap
         this ensures that the overlay won't move out of position-->
         <!--.callout-->
