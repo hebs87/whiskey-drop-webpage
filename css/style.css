@@ -61,20 +61,21 @@ body {
     border: 0;
     border-radius: 16px;
     width: 100px;
-    background-color: #bada55;
-    color: black;
+    background-color: #920c0c;
+    color: #fff;
 }
 
 .navbar-btn:hover {
-    background-color: #8ea73f;
-    border-color: #8ea73f;
-    color: #000;
+    background-color: #6b0909;
+    border-color: #6b0909;
+    color: #f2f2f2;
 }
 
 /* containers */
 
-.alert-container {
-    
+.container-wrapper--red {
+    background-color: #920c0c;
+    color: #f2f2f2;
 }
 
 .callout-container {
@@ -89,7 +90,8 @@ body {
     background-size: cover;
     /* this is to position the container in the center of the viewport ***RESEARCH FLEXBOX*** */
     display: flex;
-    align-items: center;
+    align-items: center; /* This is for the vertical centering */
+    justify-content: center; /* This is for the horizontal centering */
     position: relative;
 }
 
@@ -105,19 +107,15 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-
 /* This makes the background color of the callout area transparent */
 
 .jumbotron {
     background-color: transparent;
 }
 
-.jumbotron h1
-/* if creating a class for h1, it won't work, as this is to do with specificity
+.jumbotron h1 {
+    /* if creating a class for h1, it won't work, as this is to do with specificity
                 linking to the actual element within .jumbotron will override it */
-
-    {
     color: white;
     font-weight: bold;
     margin-bottom: 30px;
@@ -134,9 +132,10 @@ body {
     color: #d0d0d0;
 }
 
-.quotes-container {}
-
-.features-container {}
+.content-container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
 
 /* Block dividers */
 
@@ -144,10 +143,20 @@ body {
     width: 50px;
     height: 5px;
     border: 0;
+    background-color: #000;
 }
 
 .block-divider--white {
     background-color: #d0d0d057;
+}
+
+.block-divider--short {
+    width: 40px;
+    height: 2px;
+}
+
+.block-divider--white {
+    background-color: #f2f2f2;
 }
 
 /* Buttons */
@@ -162,9 +171,9 @@ body {
 }
 
 .btn--green {
-    background-color: #bada55;
-    border-color: #bada55;
-    color: #000;
+    background-color: #920c0c;
+    border-color: #920c0c;
+    color: #fff;
 }
 
 .btn--green:hover,
@@ -172,9 +181,9 @@ body {
 .btn--green:focus,
 .btn--green:active:focus {
     /* makes the btn go slightly darker when hovering, clicking, etc. */
-    background-color: #8ea73f;
-    border-color: #8ea73f;
-    color: #000;
+    background-color: #6b0909;
+    border-color: #6b0909;
+    color: #f2f2f2;
 }
 
 /* Alert */
@@ -192,4 +201,54 @@ body {
     color: #927616;
     background-color: #e2b723;
     border-color: #e2b723;
+}
+
+/* Page headers */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.page-header h2 {
+    margin-top: 0;
+}
+
+/* Quotes */
+
+.quotes .page-header {
+    margin-bottom: 25px;
+}
+
+blockquote .quote {
+    border-left: 0;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+/* Features */
+
+.feature {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature .glyphicon {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.feature .btn {
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 15px;
+    margin-top: 10px;
+    min-width: 100px;
+    font-weight: bold;
+    color: #920c0c
 }

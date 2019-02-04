@@ -18,7 +18,7 @@
         <!--.navbar-fixed-top fixes navbar to the top of the page so it's visible when scrolling-->
 
         <!--Alert-->
-        <article class="container-fluid alert-container hidden-xs">
+        <div class="container-fluid alert-container hidden-xs">
             <!--Alert-->
             <div class="row">
                 <div class="col-xs-12">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </div>
         <!--/Alert-->
 
         <div class="container-fluid">
@@ -69,7 +69,7 @@
         </div>
     </nav>
 
-    <article class="container-fluid callout-container">
+    <div class="container-fluid callout-container">
         <div class="opaque-overlay">&nbsp;</div>
         <!--this is to take the edge off the image and make the text stand out a bit more-->
         <!--&nbsp (non-breaking space) creates a space in a line that can't be broken by word wrap
@@ -81,7 +81,7 @@
                     <!--jumbotron feature really makes the callout stand out displays it on grey background-->
                     <h1>The finest whiskeys delivered to your doorstep</h1>
                     <hr class="block-divider block-divider--white">
-                    <!--block-divider--white, etc. are modifier classes, these allow us to apply general styles to <hr> but modify individual ones too-->
+                    <!--the above class with 2x -, etc. are modifier classes, these allow us to apply general styles to <hr> but modify individual ones too-->
                     <p class="lead">Sign up today to start receiving the world's best whiskeys every month. <s class="hidden-xs">£19.99</s> <span class="visible-xs"><br></span><strong><mark>First one is free!</mark></strong></p>
                     <!--.lead class helps it to stand out and render nicely;
                     s tag is for strikethrough; strong tag is for bold; mark tag is to highlight-->
@@ -97,93 +97,99 @@
             </div>
         </div>
         <!--/.Callout-->
-    </article>
+    </div>
 
-    <article class="container quotes-container">
-        <!--.quotes-->
-        <section class="quotes">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="page-header">
-                        <!--.page-header makes the header stand out by drawing a line under it-->
-                        <h2 class="text-uppercase">Quotes:</h2>
-                        <!--the .text-uppercase class is bootstrap's own class to make text uppercase-->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="media">
-                        <div class="media-left hidden-xs">
-                            <img src="image/kim.png" alt="Jane Dough" class="img-circle media-object" height=100 width=100>
-                        </div>
-                        <div class="media-body">
-                            <blockquote class="quote">
-                                <p>I've been introduced to more than 10 great whiskeys I never knew about!</p>
-                                <footer>- Jane Doe on <cite title="Twitter">Twitter</cite></footer>
-                            </blockquote>
-                            <!--the blockquote tag helps to draw attention to the quotes and improves the syntax-->
+    <div class="container-wrapper">
+        <div class="container quotes-container content-container">
+            <!--.quotes-->
+            <section class="quotes">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header">
+                            <!--.page-header makes the header stand out by drawing a line under it-->
+                            <h2 class="text-uppercase">Quotes:</h2>
+                            <!--the .text-uppercase class is bootstrap's own class to make text uppercase-->
+                            <hr class="block-divider block-divider--short">
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="media">
-                        <div class="media-left hidden-xs">
-                            <img src="image/sunny.png" alt="Joe Bloggs" class="img-circle media-object" height=100 width=100>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="media">
+                            <div class="media-left hidden-xs">
+                                <img src="image/kim.png" alt="Jane Dough" class="img-circle media-object" height=100 width=100>
+                            </div>
+                            <div class="media-body">
+                                <blockquote class="quote">
+                                    <p>"I've been introduced to more than 10 great whiskeys I never knew about!"</p>
+                                    <footer>- Jane Doe on <cite title="Twitter">Twitter</cite></footer>
+                                </blockquote>
+                                <!--the blockquote tag helps to draw attention to the quotes and improves the syntax-->
+                            </div>
                         </div>
-                        <div class="media-body">
-                            <blockquote class="quote">
-                                <p>I haven't been sober for months!</p>
-                                <footer>- Joe Bloggson on <cite title="Twitter">Twitter</cite></footer>
-                            </blockquote>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="media">
+                            <div class="media-left hidden-xs">
+                                <img src="image/sunny.png" alt="Joe Bloggs" class="img-circle media-object" height=100 width=100>
+                            </div>
+                            <div class="media-body">
+                                <blockquote class="quote">
+                                    <p>"I haven't been sober for months!"</p>
+                                    <footer>- Joe Bloggson on <cite title="Twitter">Twitter</cite></footer>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--/.quotes-->
-    </article>
+            </section>
+            <!--/.quotes-->
+        </div>
+    </div>
 
-    <article class="container features-container">
-        <!--.features-->
-        <section class="features">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="page-header">
-                        <h2 class="text-uppercase">Features:</h2>
+    <div class="container-wrapper container-wrapper--red">
+        <div class="container features-container  content-containers">
+            <!--.features-->
+            <section class="features">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="page-header">
+                            <h2 class="text-uppercase">Features:</h2>
+                            <hr class="block-divider block-divider--short block-divider--white">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="feature">
-                        <h3><span class="glyphicon glyphicon-gift hidden-xs"></span> Feature 1 <span class="label label-success">New!</span></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas provident officia asperiores, numquam adipisci possimus ducimus cumque hic sed, corporis sit iure, repellat commodi modi ad fugiat ipsum, ut doloremque alias. Aliquam
-                            tempore, suscipit obcaecati earum. Delectus cumque molestiae, dolor accusantium, sunt explicabo autem non temporibus, voluptas beatae ipsa porro!</p>
-                        <p><a href="" class="btn btn-sm btn-default">Read More</a></p>
-                        <!--the above btn classes make the buttons smaller and less visually arresting-->
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="feature">
+                            <h3><span class="glyphicon glyphicon-gift hidden-xs"></span> Feature 1 <span class="label label-success">New!</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas provident officia asperiores, numquam adipisci possimus ducimus cumque hic sed, corporis sit iure, repellat commodi modi ad fugiat ipsum, ut doloremque alias. Aliquam
+                                tempore, suscipit obcaecati earum. Delectus cumque molestiae, dolor accusantium, sunt explicabo autem non temporibus, voluptas beatae ipsa porro!</p>
+                            <p><a href="" class="btn btn-sm btn-default">Read More</a></p>
+                            <!--the above btn classes make the buttons smaller and less visually arresting-->
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <div class="feature">
+                            <h3><span class="glyphicon glyphicon-credit-card hidden-xs"></span> Feature 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas provident officia asperiores, numquam adipisci possimus ducimus cumque hic sed, corporis sit iure, repellat commodi modi ad fugiat ipsum, ut doloremque alias. Aliquam
+                                tempore, suscipit obcaecati earum. Delectus cumque molestiae, dolor accusantium, sunt explicabo autem non temporibus, voluptas beatae ipsa porro!</p>
+                            <p><a href="" class="btn btn-sm btn-default">Read More</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 hidden-md col-lg-4">
+                        <div class="feature">
+                            <h3><span class="glyphicon glyphicon-remove-sign hidden-xs"></span> Feature 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas provident officia asperiores, numquam adipisci possimus ducimus cumque hic sed, corporis sit iure, repellat commodi modi ad fugiat ipsum, ut doloremque alias. Aliquam
+                                tempore, suscipit obcaecati earum. Delectus cumque molestiae, dolor accusantium, sunt explicabo autem non temporibus, voluptas beatae ipsa porro!</p>
+                            <p><a href="" class="btn btn-sm btn-default">Read More</a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-6 col-lg-4">
-                    <div class="feature">
-                        <h3><span class="glyphicon glyphicon-credit-card hidden-xs"></span> Feature 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas provident officia asperiores, numquam adipisci possimus ducimus cumque hic sed, corporis sit iure, repellat commodi modi ad fugiat ipsum, ut doloremque alias. Aliquam
-                            tempore, suscipit obcaecati earum. Delectus cumque molestiae, dolor accusantium, sunt explicabo autem non temporibus, voluptas beatae ipsa porro!</p>
-                        <p><a href="" class="btn btn-sm btn-default">Read More</a></p>
-                    </div>
-                </div>
-                <div class="col-xs-12 hidden-md col-lg-4">
-                    <div class="feature">
-                        <h3><span class="glyphicon glyphicon-remove-sign hidden-xs"></span> Feature 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas provident officia asperiores, numquam adipisci possimus ducimus cumque hic sed, corporis sit iure, repellat commodi modi ad fugiat ipsum, ut doloremque alias. Aliquam
-                            tempore, suscipit obcaecati earum. Delectus cumque molestiae, dolor accusantium, sunt explicabo autem non temporibus, voluptas beatae ipsa porro!</p>
-                        <p><a href="" class="btn btn-sm btn-default">Read More</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--/.features-->
-    </article>
+            </section>
+            <!--/.features-->
+        </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
